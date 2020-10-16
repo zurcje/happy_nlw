@@ -1,11 +1,14 @@
-const map = L.map("mapid").setView([51.505, -0.09], 13);
+//create map
+const map = L.map("mapid").setView([-27.5953613,-48.5249761], 15);
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(map);
+//create and tileLayer
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
-L.marker([51.5, -0.09])
+//create icon
+
+
+//create and add marker
+L.marker([-27.5953613,-48.5249761])
 .addTo(map)
 .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
 .openPopup();
